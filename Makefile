@@ -326,7 +326,7 @@ configure-gecode-windows:
 configure-gecode-linux:
 	(cd $(PWD)/gecode/build && \
 	 ../sources/configure \
-		--enable-static \
+		--enable-static --disable-shared \
 		--disable-examples --disable-search --disable-minimodel \
 		--prefix='$(PWD)/gecode/install')
 
@@ -336,7 +336,7 @@ configure-gecode-darwin:
         ../sources/configure \
                CXX='g++-4.2' \
                CC='gcc-4.2' \
-               --enable-static \
+               --enable-static --disable-shared \
                --disable-examples --disable-search --disable-minimodel \
                --prefix='$(PWD)/gecode/install')
 
