@@ -59,9 +59,6 @@
 #########
 #
 # Troubleshooting:
-# - Gecode is not available in a CVS Version, download the package at 
-#   http://www.gecode.org and unpack it in PWD/gecode/sources
-#   disable the respective calls in 'make setup'
 # - Check $PATH and $ALICE_HOME. In particular, $ALICE_HOME must use proper
 #   Windows syntax, not Cygwin (e.g. for drives)!
 # - After having performed 'make distro' it is no longer possible to invoke
@@ -145,7 +142,6 @@ setup:
 	make build-seam-support
 	mkdir -p $(PWD)/seam/build
 	mkdir -p $(PWD)/gecode/build
-	(cd $(PWD)/gecode && wget $(GECODE_URL) -O - | tar xz && mv $(GECODE_ARCHIVE_NAME) sources && cd sources && patch -p1 < $(PWD)/make/patches/gecode1-3-1_gcc4-4.patch)
 	mkdir -p $(PWD)/alice/build
 	@echo Setup complete.
 	@echo Include $(PWD)/seam-support/install/bin into your PATH.
