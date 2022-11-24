@@ -330,8 +330,8 @@ configure-gecode-linux:
 configure-gecode-darwin:
 	(cd $(PWD)/gecode/build && \
         ../sources/configure \
-               CXX='g++-10' \
-               CC='gcc-10' \
+               CXX='g++-12' \
+               CC='gcc-12' \
                --enable-static --disable-shared \
                --disable-examples --disable-search --disable-minimodel \
                --prefix='$(PWD)/gecode/install')
@@ -389,8 +389,8 @@ configure-seam-linux64:
 configure-seam-darwin64:
 	(cd $(PWD)/seam/build && \
         ../sources/configure \
-               CXX='g++-10' \
-               CC='gcc-10' \
+               CXX='g++-12' \
+               CC='gcc-12' \
                --prefix='$(PREFIX)' \
                --with-warnings=yes \
                --disable-lightning)
